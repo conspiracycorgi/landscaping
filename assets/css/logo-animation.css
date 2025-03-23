@@ -1,0 +1,192 @@
+/* Logo Animation Styles */
+.header-animation-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  max-width: 500px;
+  height: 60px; /* Fixed height to prevent overflow */
+}
+
+.logo-container {
+  position: relative;
+  width: 50px; /* Reduced width */
+  height: 50px; /* Maintained height */
+  overflow: hidden; /* Changed to hidden to crop the logo background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 4px; /* Optional: add slight rounding to the logo container */
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  object-fit: contain; /* Ensure the logo fits properly */
+  max-height: 100%; /* Ensure it doesn't exceed container height */
+}
+
+.navbar-brand:hover .logo-img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Mower animation wrapper */
+.mower-animation-wrapper {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  animation: mower-enter 2s forwards;
+  width: 40px; /* Reduced size */
+  height: 30px; /* Reduced size */
+  display: block;
+}
+
+.mower-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+/* Company name reveal */
+.company-name-reveal {
+  position: relative;
+  margin-left: 15px;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.company-name-reveal span {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: text-reveal 0.5s ease forwards;
+  animation-delay: 2s; /* Start after mower reaches logo */
+}
+
+/* Animation keyframes */
+@keyframes mower-enter {
+  0% {
+    left: -100px;
+    opacity: 1;
+  }
+  70% {
+    left: 0px; /* Stop at the left edge of the logo */
+    opacity: 1;
+  }
+  90% {
+    left: 0px;
+    opacity: 1;
+  }
+  100% {
+    left: 0px;
+    opacity: 0; /* Fade out at the end */
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Grass particles animation */
+.grass-particle {
+  position: absolute;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #8bc34a;
+  border-radius: 50%;
+  animation: grass-fall 3s linear forwards;
+  z-index: 1;
+}
+
+@keyframes grass-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.company-name-mobile {
+  display: none;
+  margin-left: 10px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.company-name-mobile span {
+  white-space: nowrap;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-animation-container {
+    max-width: 300px;
+    height: 50px; /* Smaller height for mobile */
+    justify-content: flex-start; /* Align to the left */
+    margin-left: 0;
+  }
+
+  .company-name-reveal span {
+    font-size: 0.9rem;
+  }
+
+  .mower-animation-wrapper {
+    width: 30px;
+  }
+
+  .logo-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .company-name-reveal {
+    display: none;
+  }
+
+  .company-name-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-animation-container {
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .navbar-brand {
+    margin-right: 5px;
+  }
+
+  .company-name-mobile {
+    display: block;
+  }
+}
+

@@ -1,0 +1,133 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{{ '/assets/images/hero-bg.jpg' | relative_url }}');">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 hero-content text-center">
+      <span class="hero-badge">Professional Landscaping Services</span>
+      <h1>Transform Your Outdoor Space Into a Natural Paradise</h1>
+      <p>Serving Schuylkill and Berks counties with expert lawn care, tree trimming, and garden design services.</p>
+      <div class="hero-buttons">
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">Get a Free Quote</a>
+        <a href="{{ '/services/' | relative_url }}" class="btn btn-outline-light btn-lg">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="services-section py-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center mb-5">
+      <span class="section-badge">What We Offer</span>
+      <h2 class="section-heading text-center">Our Services</h2>
+      <p class="lead">We provide comprehensive landscaping solutions tailored to your property's unique needs</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card service-card h-100">
+        <div class="service-img-container">
+          <img src="{{ '/assets/images/lawn-care.jpg' | relative_url }}" class="card-img-top" alt="Lawn Care Services">
+          <div class="service-overlay">
+            <a href="{{ '/services/#lawn-care' | relative_url }}" class="overlay-link"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Lawn Care</h5>
+          <p class="card-text">Professional lawn maintenance including mowing, fertilization, aeration, and weed control.</p>
+          <a href="{{ '/services/#lawn-care' | relative_url }}" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card service-card h-100">
+        <div class="service-img-container">
+          <img src="{{ '/assets/images/tree-trimming.jpg' | relative_url }}" class="card-img-top" alt="Tree Trimming Services">
+          <div class="service-overlay">
+            <a href="{{ '/services/#tree-trimming' | relative_url }}" class="overlay-link"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Tree Trimming</h5>
+          <p class="card-text">Expert tree pruning, trimming, and removal services to maintain the health and appearance of your trees.</p>
+          <a href="{{ '/services/#tree-trimming' | relative_url }}" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card service-card h-100">
+        <div class="service-img-container">
+          <img src="{{ '/assets/images/garden-design.jpg' | relative_url }}" class="card-img-top" alt="Garden Design Services">
+          <div class="service-overlay">
+            <a href="{{ '/services/#garden-design' | relative_url }}" class="overlay-link"><i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Garden Design</h5>
+          <p class="card-text">Custom garden design and installation services to create beautiful outdoor spaces.</p>
+          <a href="{{ '/services/#garden-design' | relative_url }}" class="btn btn-outline-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12 text-center">
+      <a href="{{ '/services/' | relative_url }}" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="about-preview-section py-5">
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <div class="about-image-container">
+        <img src="{{ '/assets/images/SHAWN GALLAGHER LANDSCAPING.jpg' | relative_url }}" alt="Shawn Gallagher Landscaping Team" class="img-fluid rounded">
+        <div class="experience-badge">
+          <span class="years">15+</span>
+          <span class="text">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <span class="section-badge">Why Choose Us</span>
+      <h2 class="section-heading">Trusted Landscaping Experts</h2>
+      <p class="lead">With over 15 years of experience serving Schuylkill and Berks counties, we've built a reputation for quality, reliability, and exceptional customer service.</p>
+      <div class="features-list">
+        <div class="feature-item">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>Licensed and insured professionals</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>Customized solutions for your property</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>Eco-friendly practices</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>Competitive pricing</span>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-check-circle text-primary"></i>
+          <span>Satisfaction guaranteed</span>
+        </div>
+      </div>
+      <a href="{{ '/about/' | relative_url }}" class="btn btn-secondary mt-4">Learn More About Us</a>
+    </div>
+  </div>
+</div>
+</section>
+
+{% include testimonials.html %}
+
+{% include cta-section.html %}
+

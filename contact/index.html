@@ -1,0 +1,184 @@
+---
+layout: default
+title: Contact Us
+---
+
+<section class="page-header py-5" style="background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{{ '/assets/images/hero-bg.jpg' | relative_url }}');">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10 text-center">
+        <span class="hero-badge">Get In Touch</span>
+        <h1>Contact Us</h1>
+        <p>Reach out for a free consultation and quote on your landscaping project</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <span class="section-badge">Contact Information</span>
+        <h2 class="section-heading">Get In Touch</h2>
+        <p class="lead">Have questions about our services or ready to schedule a consultation? Contact us today and one of our friendly team members will be happy to assist you.</p>
+        
+        <div class="contact-info mt-4">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Address</h5>
+              <p>{{ site.business.address.street }}<br>{{ site.business.address.city }}, {{ site.business.address.state }} {{ site.business.address.zip }}</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Phone</h5>
+              <p>{{ site.business.phone }}</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Email</h5>
+              <p>{{ site.business.email }}</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Business Hours</h5>
+              <p>{{ site.business.hours }}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-media mt-4">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="https://facebook.com/shawngallagherlandscaping" class="me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/shawngallagherlandscaping" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-7">
+        <div class="contact-form">
+          <h3 class="mb-4">Request a Free Quote</h3>
+          <form id="contactForm" action="https://formsubmit.co/Shawngallaghercontracting@gmail.com" method="POST" class="needs-validation" novalidate>
+            <input type="hidden" name="_subject" value="New quote request from website">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/thank-you/">
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName" class="form-label">First Name*</label>
+                <input type="text" class="form-control" id="firstName" name="First Name" required>
+                <div class="invalid-feedback">
+                  Please provide your first name.
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-3">
+                <label for="lastName" class="form-label">Last Name*</label>
+                <input type="text" class="form-control" id="lastName" name="Last Name" required>
+                <div class="invalid-feedback">
+                  Please provide your last name.
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email*</label>
+                <input type="email" class="form-control" id="email" name="Email" required>
+                <div class="invalid-feedback">
+                  Please provide a valid email address.
+                </div>
+              </div>
+              
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label">Phone*</label>
+                <input type="tel" class="form-control" id="phone" name="Phone" required>
+                <div class="invalid-feedback">
+                  Please provide your phone number.
+                </div>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="address" class="form-label">Property Address*</label>
+              <input type="text" class="form-control" id="address" name="Property Address" required>
+              <div class="invalid-feedback">
+                Please provide your property address.
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="service" class="form-label">Service Interested In*</label>
+              <select class="form-select" id="service" name="Service" required>
+                <option value="" selected disabled>Select a service</option>
+                <option value="Lawn Care">Lawn Care</option>
+                <option value="Tree Trimming">Tree Trimming</option>
+                <option value="Garden Design">Garden Design</option>
+                <option value="Hardscaping">Hardscaping</option>
+                <option value="Multiple Services">Multiple Services</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a service.
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="message" class="form-label">Additional Information</label>
+              <textarea class="form-control" id="message" name="Message" rows="4"></textarea>
+            </div>
+            
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="consent" name="Consent" required>
+              <label class="form-check-label" for="consent">I consent to having this website store my submitted information so they can respond to my inquiry.*</label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg">Get a Free Quote</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center mb-4">
+        <span class="section-badge">Our Location</span>
+        <h2>Service Area</h2>
+        <p class="lead">Serving Schuylkill and Berks counties, Pennsylvania</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-76.41617207402436!3d40.58058466506178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c5e1c3c3c1b5e5%3A0xf3dea408d4e7d2be!2sSchuylkill%20County%2C%20PA!5e0!3m2!1sen!2sus!4v1647887291102!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

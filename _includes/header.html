@@ -1,0 +1,42 @@
+<header class="site-header">
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <div class="header-animation-container">
+      <div class="mower-animation-wrapper">
+        <img src="{{ '/assets/images/mower.gif' | relative_url }}" alt="Mower" class="mower-gif">
+      </div>
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">
+        <div class="logo-container">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Shawn Gallagher Landscaping" class="logo-img">
+        </div>
+      </a>
+      <div class="company-name-reveal">
+        <span>Shawn Gallagher Landscaping</span>
+      </div>
+      <div class="company-name-mobile">
+        <span>Shawn Gallagher</span>
+      </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url contains '/services/' %}active{% endif %}" href="{{ '/services/' | relative_url }}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+

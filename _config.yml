@@ -1,0 +1,52 @@
+# Site settings
+title: Shawn Gallagher Landscaping
+email: Shawngallaghercontracting@gmail.com
+description: >-
+  Professional landscaping services in Schuylkill and Berks counties, Pennsylvania. 
+  Offering lawn care, tree trimming, and garden design services.
+baseurl: "/landscaping" # the subpath of your site
+url: "https://conspiracycorgi.github.io" # the base hostname & protocol
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO settings
+author: Shawn Gallagher Landscaping
+logo: /assets/images/logo.png
+social:
+  name: Shawn Gallagher Landscaping
+  links:
+    - https://facebook.com/shawngallagherlandscaping
+    - https://instagram.com/shawngallagherlandscaping
+
+# Business information
+business:
+  name: Shawn Gallagher Landscaping
+  address:
+    street: 123 Main Street
+    city: Pottsville
+    state: PA
+    zip: 17901
+  phone: (570) 555-1234
+  email: Shawngallaghercontracting@gmail.com
+  hours: "Monday-Friday 8:00 AM - 6:00 PM, Saturday 9:00 AM - 3:00 PM"
+  areas_served: "Schuylkill and Berks counties, Pennsylvania"
+
+# Collections
+collections:
+  services:
+    output: true
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+

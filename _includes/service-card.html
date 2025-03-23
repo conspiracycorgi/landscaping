@@ -1,0 +1,9 @@
+<div class="card service-card h-100">
+  <img src="{{ include.image | relative_url }}" class="card-img-top" alt="{{ include.title }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ include.title }}</h5>
+    <p class="card-text">{{ include.description }}</p>
+    <a href="{{ include.link | relative_url }}" class="btn btn-outline-primary">Learn More</a>
+  </div>
+</div>
+

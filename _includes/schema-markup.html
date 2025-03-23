@@ -1,0 +1,77 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ site.business.name }}",
+  "image": "{{ site.url }}{{ site.baseurl }}{{ site.logo }}",
+  "@id": "{{ site.url }}{{ site.baseurl }}/#localbusiness",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "telephone": "{{ site.business.phone }}",
+  "email": "{{ site.business.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.business.address.street }}",
+    "addressLocality": "{{ site.business.address.city }}",
+    "addressRegion": "{{ site.business.address.state }}",
+    "postalCode": "{{ site.business.address.zip }}",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.6859,
+    "longitude": -76.1953
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:00"
+    }
+  ],
+  "sameAs": [
+    "https://facebook.com/shawngallagherlandscaping",
+    "https://instagram.com/shawngalla  [
+    "https://facebook.com/shawngallagherlandscaping",
+    "https://instagram.com/shawngallagherlandscaping"
+  ],
+  "priceRange": "$$",
+  "areaServed": "{{ site.business.areas_served }}",
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Lawn Care"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Tree Trimming"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Garden Design"
+      }
+    }
+  ]
+}
+</script>
+

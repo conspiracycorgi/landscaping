@@ -1,0 +1,40 @@
+<footer class="site-footer py-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="footer-logo mb-3">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Shawn Gallagher Landscaping" class="img-fluid" style="max-width: 150px;">
+      </div>
+      <p>Professional landscaping services in Schuylkill and Berks counties, Pennsylvania.</p>
+      <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>{{ site.business.address.street }}</p>
+      <p class="mb-0"><i class="fas fa-map me-2"></i>{{ site.business.address.city }}, {{ site.business.address.state }} {{ site.business.address.zip }}</p>
+      <p class="mb-0"><i class="fas fa-phone me-2"></i>{{ site.business.phone }}</p>
+      <p><i class="fas fa-envelope me-2"></i>{{ site.business.email }}</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h5>Our Services</h5>
+      <ul class="list-unstyled">
+        <li><a href="{{ '/services/#lawn-care' | relative_url }}">Lawn Care</a></li>
+        <li><a href="{{ '/services/#tree-trimming' | relative_url }}">Tree Trimming</a></li>
+        <li><a href="{{ '/services/#garden-design' | relative_url }}">Garden Design</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h5>Business Hours</h5>
+      <p>{{ site.business.hours }}</p>
+      <h5 class="mt-4">Follow Us</h5>
+      <div class="social-icons">
+        <a href="https://facebook.com/shawngallagherlandscaping" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/shawngallagherlandscaping" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <p>&copy; {% assign date_format = site.minima.date_format | default: "%Y" %}{{ 'now' | date: date_format }} Shawn Gallagher Landscaping. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+</footer>
+

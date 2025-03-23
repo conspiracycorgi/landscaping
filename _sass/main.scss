@@ -1,0 +1,354 @@
+// Variables
+$primary-color: #1b4d2e; // Darker forest green
+$secondary-color: #5d4037; // Darker brown
+$accent-color: #33691e; // Dark olive green
+$light-color: #f1f8e9; // Light sage
+$dark-color: #212121;
+$text-color: #333333;
+$footer-bg: #1b2b20; // Dark forest green
+
+// Global styles
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    border-color: darken($secondary-color, 10%);
+  }
+}
+
+// Header
+.site-header {
+  background-color: $primary-color;
+  
+  .navbar {
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    
+    &:hover, &.active {
+      color: #fff !important;
+    }
+  }
+}
+
+// Hero section
+.hero-section {
+  background-color: rgba(0, 0, 0, 0.6); // Darker overlay
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 8rem 0;
+  position: relative;
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+  }
+}
+
+// Services section
+.services-section {
+  padding: 5rem 0;
+  
+  .service-card {
+    height: 100%;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-img-top {
+      height: 220px; // Fixed height for consistency
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .card-title {
+      color: $primary-color;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+  }
+}
+
+// CTA section
+.cta-section {
+  background-color: $primary-color;
+  color: #fff;
+  
+  h2 {
+    font-weight: 700;
+  }
+  
+  .btn-primary {
+    background-color: $secondary-color;
+    color: #fff;
+    border: none;
+    
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// Testimonials section
+.testimonials-section {
+  background-color: $light-color;
+  
+  .testimonial-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    height: 100%;
+    
+    .testimonial-content {
+      p {
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        min-height: 100px; // Ensure consistent height
+      }
+    }
+    
+    .testimonial-author {
+      h5 {
+        margin-bottom: 0.25rem;
+        color: $primary-color;
+      }
+      
+      p {
+        font-style: normal;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+// About section
+.about-section {
+  padding: 5rem 0;
+  
+  .about-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Contact section
+.contact-section {
+  padding: 5rem 0;
+  
+  .contact-info {
+    i {
+      color: $primary-color;
+      width: 25px;
+    }
+  }
+  
+  .contact-form {
+    background-color: $light-color;
+    padding: 2rem;
+    border-radius: 8px;
+    
+    .form-control {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+      }
+    }
+    
+    label {
+      font-weight: 500;
+    }
+  }
+}
+
+// Footer
+.site-footer {
+  background-color: $footer-bg;
+  color: #fff;
+  
+  h5 {
+    color: $light-color;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+  
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+  
+  .social-icons {
+    a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 36px;
+      margin-right: 10px;
+      
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+  
+  hr {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Service detail page
+.service-detail {
+  padding: 5rem 0;
+  
+  .service-image {
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+}
+
+// Utility classes
+.section-heading {
+  position: relative;
+  margin-bottom: 3rem;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: $primary-color;
+  }
+  
+  &.text-center {
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// Add consistent image styling for all pages
+.img-fluid.rounded {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+// Update the team cards for consistency
+.team-card {
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// Update buttons to match the new color scheme
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    border-color: darken($secondary-color, 10%);
+  }
+}
+
+.btn-outline-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
