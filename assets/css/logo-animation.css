@@ -107,25 +107,65 @@
   }
 }
 
-/* Grass particles animation */
+/* Grass blades animation - improved blade appearance with natural falling */
 .grass-particle {
   position: absolute;
-  bottom: 0;
-  width: 5px;
-  height: 5px;
-  background-color: #8bc34a;
-  border-radius: 50%;
-  animation: grass-fall 3s linear forwards;
+  top: 25px; /* Start at mower height */
+  width: 3px;
+  height: 15px;
+  background-color: #7cb342; /* Medium green */
+  border-radius: 0 100% 0 100%; /* Curved shape */
+  transform-origin: bottom center;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  /* Use clip-path for more natural blade shape */
+  clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+  /* Natural falling animation */
+  animation: grass-fall 2s ease-out forwards;
 }
 
+/* Create multiple variations for realism */
+.grass-particle:nth-child(4n) {
+  height: 18px;
+  width: 4px;
+  background-color: #8bc34a; /* Standard green */
+  clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+}
+
+.grass-particle:nth-child(4n + 1) {
+  height: 12px;
+  width: 2px;
+  background-color: #9ccc65; /* Light green */
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.grass-particle:nth-child(4n + 2) {
+  height: 14px;
+  width: 3px;
+  background-color: #689f38; /* Darker green */
+  clip-path: polygon(30% 0%, 70% 0%, 90% 100%, 10% 100%);
+}
+
+/* Natural falling animation with slight rightward drift */
 @keyframes grass-fall {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0) translateX(0) rotate(0deg) scaleY(0.5);
+    opacity: 0.9;
+  }
+  20% {
+    transform: translateY(5px) translateX(2px) rotate(15deg) scaleY(0.8);
     opacity: 1;
   }
+  50% {
+    transform: translateY(15px) translateX(5px) rotate(30deg) scaleY(1);
+    opacity: 0.9;
+  }
+  80% {
+    transform: translateY(30px) translateX(8px) rotate(45deg) scaleY(0.9);
+    opacity: 0.7;
+  }
   100% {
-    transform: translateY(50px) rotate(360deg);
+    transform: translateY(50px) translateX(10px) rotate(60deg) scaleY(0.8);
     opacity: 0;
   }
 }
